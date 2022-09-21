@@ -5,61 +5,19 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
-class CadenaTests {
+class FizzBuzzTests {
 	
 	@Test
 	void splitWhiteSpaces_WhenCall_returnArrayOfWordsBySpaces() {
 		//Create the object
-		Cadena cadena = new Cadena("Hola buenos días");
-		
+		FizzBuzz fizzBuzz = new FizzBuzz(1);
+
 		//Act
-		String [] words = cadena.splitWhiteSpacesArray();
+		String result = fizzBuzz.run();
 		
 		//Assert
-		String [] expected = {"Hola","buenos","días"};
-		assertArrayEquals(expected, words);
+		assertEquals("1",result);
 	}
-	
-	@Test
-	void split_WhenCall_returnArrayOfWordsSeparatedByGivenCharacter() {
-		Cadena cadena = new Cadena("kjfdlkasfdaslkj1ljdfsljaslfj1 kjlkjkljlk1lkj");
-		
-		String [] words = cadena.split("1");
-		
-		String [] expected = {"kjfdlkasfdaslkj","ljdfsljaslfj"," kjlkjkljlk","lkj"};
-		assertArrayEquals(expected, words);
-	}
-	
-	@Test
-	void split_whenCall_returnPutACharacterToSplit() {
-		Cadena cadena = new Cadena("kjfdlkasfdaslkj1ljdfsljaslfj1 kjlkjkljlk1lkj");
-		
-		String [] words = cadena.split("");
-		
-		String [] expected = {"Put a character to split"};
-		assertArrayEquals(expected, words);
-	}
-	
-	
-	@Test
-	void splitWithoutRepetition_whenCall_returnArrayOfSplitedWords() {
-		Cadena cadena = new Cadena("hola buenos días mundo mundo mundo cruel cruel");
-		
-		String [] words = cadena.splitWithoutRepeat(" ");
-		
-		String [] expected = {"hola", "buenos", "días", "mundo", "cruel"};
-		assertEquals(expected.length, words.length);
-	}
-	
-	@Test
-	void intersection_whenCall_returnASingleArrayWithIntersectionWords() {
-		Cadena cadena = new Cadena("hola buenos días mundo mundo mundo cruel cruel");
-		
-		String [] words = cadena.splitWithoutRepeat(" ");
-		
-		String [] expected = {"hola", "buenos", "días", "mundo", "cruel"};
-		assertEquals(expected.length, words.length);
-		
-	}
+
 
 }
