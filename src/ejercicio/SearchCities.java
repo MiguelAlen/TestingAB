@@ -2,8 +2,9 @@ package ejercicio;
 
 public class SearchCities {
 
+	MockDB mockdb = new mockdb;
 	public String [] find(String input) {
-		String [] values = null;
-		return values;
+
+		return mockdb.find(input);
 	}
 }

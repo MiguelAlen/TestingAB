@@ -12,8 +12,13 @@ public class MockDB {
         "Santa Cruz de Tenerife","Teruel","Toledo","Valencia","Valladolid","Vizcaya","Zamora","Zaragoza"
 	));
 	
-	public String[] find() {
+	public String[] find(String input) {
 		String [] values = null;
+
+		if(input.lenght < 2){
+			return new String[0];
+		}
+
 		return  values;
 	}
 }
