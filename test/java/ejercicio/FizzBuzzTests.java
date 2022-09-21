@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
-class FizzBuzzTests extends TestCase {
+class FizzBuzzTests {
 	
 	@Test
 	void run_whenCall_ReturnTheSameNumberString() {
@@ -31,7 +31,7 @@ class FizzBuzzTests extends TestCase {
 		assertEquals("FIZZ",result);
 	}
 	@Test
-	void run_whenCall_returnFizzWhenInputIsThree() {
+	void run_whenCall_returnBuzzWhenInputIsThree() {
 		//Create the object
 		FizzBuzz fizzBuzz = new FizzBuzz(5);
 
@@ -42,7 +42,7 @@ class FizzBuzzTests extends TestCase {
 		assertEquals("BUZZ",result);
 	}
 	@Test
-	void run_whenCall_returnFizzWhenInputIsThree() {
+	void run_whenCall_returnFizzBuzzWhenInputIsThree() {
 		//Create the object
 		FizzBuzz fizzBuzz = new FizzBuzz(15);
 
