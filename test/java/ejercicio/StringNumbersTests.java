@@ -10,7 +10,6 @@ public class StringNumbersTests {
 		StringNumbers numbers = new StringNumbers();
 		
 		String result = numbers.addNumbers("");
-		
 		assertEquals("0",result);
 	}
 	
@@ -43,8 +42,17 @@ public class StringNumbersTests {
 	public void addNumber_WhenCallWithDelimiters_CorrectValue() {
 		StringNumbers numbers = new StringNumbers();
 
-		String result = numbers.addNumbers("$","1.2$1.8");
-
+		String result = numbers.addNumbers(";","1.2;1.8");
+		
 		assertEquals("3.0",result);
+	}
+	
+	@Test
+	public void addNumber_WhenCallWithNegative_CorrectValue() {
+		StringNumbers numbers = new StringNumbers();
+
+		String result = numbers.addNumbers(";","-1.2;1.8");
+		
+		assertEquals("Not valid negative numbers",result);
 	}
 }
