@@ -13,12 +13,22 @@ public class StringNumbersTests {
 		
 		assertEquals(0,result);
 	}
+	
 	@Test
-	public void addNumbers_WhenCall_Return0() {
+	public void addNumbers_WhenCall_Return3() {
 		StringNumbers numbers = new StringNumbers();
 
 		int result = numbers.addNumbers("1,2");
 
 		assertEquals(3,result);
+	}
+	
+	@Test
+	public void addNumbers_WhenCall_ReturnErrorMsg() {
+		StringNumbers numbers = new StringNumbers();
+
+		int result = numbers.addNumbers("1,2,");
+
+		assertEquals("Format not valid",result);
 	}
 }
