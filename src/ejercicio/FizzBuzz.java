@@ -9,6 +9,8 @@ public class FizzBuzz {
 	}
 	
 	public String run() {
-		return (number % 3 == 0) ? "FIZZ" : Integer.toString(number);
+
+		 if(number % 3 == 0){ return "FIZZ";}
+		 else{ return (number % 5 == 0)? "BUZZ" : Integer.toString(number);}
 	}
 }
