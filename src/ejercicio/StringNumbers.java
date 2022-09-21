@@ -4,22 +4,22 @@ import java.util.Arrays;
 
 public class StringNumbers {
 
-    public int addNumbers(String entrada){
-    	
-    	if(entrada.equals("")){return 0;}
+    public String addNumbers(String entrada){
+    	//Validations
+    	if(entrada.equals("")){return "0";}
+        if(entrada.substring(entrada.length() - 1).equals(",")) {return "Format not valid";}
 
-        if(entrada.substring(entrada.length() - 1)) == ","){return "Format not valid"}
-
-    	int[] numbers = Arrays.stream(entrada.split(","))
-                .mapToInt(Integer::parseInt)
+        //Actions
+    	double[] numbers = Arrays.stream(entrada.split(","))
+                .mapToDouble(Double::parseDouble)
                 .toArray();
     	
-    	int suma = 0;
-    	for(int element : numbers) {
+    	double suma = 0;
+    	for(double element : numbers) {
     		suma += element;
     	}
     	
-    	return suma;
+    	return Double.toString(suma);
     	
     	
     	
