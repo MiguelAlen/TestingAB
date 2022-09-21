@@ -31,4 +31,12 @@ public class StringNumbersTests {
 
 		assertEquals("Format not valid",result);
 	}
+	@Test
+	public void addNumbers_WhenCall_ReturnErrorMsg() {
+		StringNumbers numbers = new StringNumbers();
+
+		double result = numbers.addNumbers("1.2,1.8");
+
+		assertEquals("3",result);
+	}
 }
