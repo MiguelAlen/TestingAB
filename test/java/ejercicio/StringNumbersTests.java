@@ -44,7 +44,7 @@ public class StringNumbersTests {
 		StringNumbers numbers = new StringNumbers();
 
 		String result = numbers.addNumbers("$","1.2$1.8");
-		
+
 		assertEquals("3.0",result);
 	}
 }
